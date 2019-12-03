@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CrudPrincipalController">
+   <children>
+      <TabPane fx:id="abas" layoutX="20.0" layoutY="60.0" onMouseClicked="#gerenciarAbas" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <tabs>
+            <Tab fx:id="principal" closable="false" text="Principal">
+               <content>
+                  <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="299.0" layoutY="234.0" mnemonicParsing="false" onAction="#salvarNota" prefWidth="70.0" text="Salvar" />
+                        <ComboBox fx:id="cbItens" layoutX="95.0" layoutY="30.0" prefHeight="25.0" prefWidth="274.0" />
+                        <Label layoutX="14.0" layoutY="28.0" text="Itens:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="390.0" layoutY="30.0" mnemonicParsing="false" onAction="#selecionarItem" prefHeight="25.0" prefWidth="75.0" text="Selecionar" />
+                        <TableView fx:id="criteriosPrincipal" layoutX="17.0" layoutY="266.0" prefHeight="200.0" prefWidth="430.0">
+                           <columns>
+                              <TableColumn fx:id="nomeCriterios" maxWidth="5000.0" minWidth="10.0" prefWidth="174.0" resizable="false" text="Critério" />
+                              <TableColumn fx:id="PesoCriterios" prefWidth="107.0" text="Peso" />
+                              <TableColumn fx:id="notaCriterios" prefWidth="148.0" text="Nota" />
+                           </columns>
+                        </TableView>
+                        <Button id="atualizarItens" layoutX="376.0" layoutY="234.0" mnemonicParsing="false" onAction="#AtualizacaoNota" prefWidth="70.0" text="Atualizar" />
+                        <Label layoutX="14.0" layoutY="487.0" text="Critério:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomeConsultaCriterio" layoutX="95.0" layoutY="488.0" prefHeight="25.0" prefWidth="275.0" />
+                        <Button layoutX="376.0" layoutY="488.0" mnemonicParsing="false" onAction="#consultarCriteriosPrincipal" prefWidth="80.0" text="Consultar" />
+                        <Label layoutX="14.0" layoutY="233.0" text="Cadastrar nota:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField id="nomeItens" fx:id="nomeNota" layoutX="156.0" layoutY="234.0" prefHeight="8.0" prefWidth="132.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="atualizarNota" closable="false" disable="true">
+               <content>
+                  <AnchorPane id="Content" disable="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" visible="true">
+                     <children>
+                        <TextField id="nomeItens" fx:id="notaAtualizacao" layoutX="91.0" layoutY="62.0" prefWidth="406.0" />
+                        <Label layoutX="29.0" layoutY="23.0" text="Atualizar nota:" />
+                        <Label layoutX="29.0" layoutY="59.0" text="Nota:" />
+                        <Button id="salvaNovoItens" layoutX="427.0" layoutY="101.0" mnemonicParsing="false" onAction="#salvarNovaNota" prefWidth="70.0" text="Salvar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label layoutX="20.0" layoutY="10.0" prefHeight="53.0" prefWidth="580.0" text="Principal - Software Comparação" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
